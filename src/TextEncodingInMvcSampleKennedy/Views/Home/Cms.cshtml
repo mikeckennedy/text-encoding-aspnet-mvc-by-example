@@ -1,0 +1,25 @@
+﻿@model string
+@{
+	ViewBag.Title = "Text Encoding in ASP.NET MVC Sample by Michael Kennedy: Cms";
+	string pageContent = Model;
+}
+
+<h2>A Simulated CMS Page</h2>
+<div>
+	Note: This page is *meant* to accept and display raw HTML by trusted editors.<br/>
+	<br/>
+</div>
+
+<div>
+	@Html.Raw(Model)
+</div>
+<div style="color: gray; margin-top: 40px; border-top: 1px solid black;">
+	[use this form to edit the contents]<br/>
+	@using(Html.BeginForm())
+	{
+		<h3>Edit Page Contents</h3>
+		@Html.TextArea("pageContent", pageContent)<br/>
+	    <button>Update contents</button>
+	}
+
+</div>

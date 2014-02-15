@@ -1,0 +1,38 @@
+﻿@model string
+@{
+	ViewBag.Title = "Text Encoding in ASP.NET MVC Sample by Michael Kennedy: Forum";
+
+	string commentText = Model;
+}
+
+<h2>Forum</h2>
+<div>
+	Suppose this is a blog entry, or forum question or something like that. 
+	If we allow anonymous users to submit arbitrary text, all sorts of bad
+	stuff happens. One user can try to attack the other via our site, for example!<br/>
+	<br/>
+	Luckily, Razor is safe by default. Taking potentially unsafe input and
+	directly writing it to the page via <em>@@commentText</em> will not
+	hurt you. Try adding @("<script> alert('hacked you!');</script>") as the 
+	input. Without special HTML encoding, that would run and possibly be
+	trouble. But @@ protects you from it and shows the raw HTML here.
+</div>
+<br/>
+<br/>
+<div>
+	<strong>Comment text:</strong><br/>
+	<div>
+		@commentText
+	</div>
+</div>
+
+<div style="color: gray; margin-top: 40px; border-top: 1px solid black;">
+	Post / update a comment:<br/>
+	@using(Html.BeginForm())
+	{
+		<h3>Comment Text</h3>
+		@Html.TextArea("commentText", commentText)<br/>
+	    <button>Update contents</button>
+	}
+
+</div>

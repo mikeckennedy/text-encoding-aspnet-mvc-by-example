@@ -1,0 +1,25 @@
+﻿@using TextEncodingInMvcSampleKennedy.Infrastructure
+@{
+	ViewBag.Title = "Text Encoding in ASP.NET MVC Sample by Michael Kennedy: Helpers";
+}
+
+<h2>Html Helpers with MvcHtmlString</h2>
+<div>
+	The only difference between these two uses of OurHtmlHelper.LinkWithImage() is
+	the first one is returning a raw string (which @@ in razor encodes) and the
+	second is declaring HTML content by return an MvcHtmlString() which @@ does not
+	encode.
+</div>
+
+<h3>This is doing it wrong (with string class)</h3>
+
+@OurHtmlHelper.LinkWithImageBad(
+    "../images/cat.jpg", 
+	"https://www.google.com/search?q=lolcasts")
+
+<br/>
+
+<h3>This is doing it RIGHT (with MvcHtmlString class)</h3>
+
+@OurHtmlHelper.LinkWithImage("../images/cat.jpg", "https://www.google.com/search?q=lolcats")<br/>
+Try to click it, it's a link after all.

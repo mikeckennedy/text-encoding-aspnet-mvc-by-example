@@ -1,0 +1,32 @@
+﻿@model string
+@{
+	ViewBag.Title = "Text Encoding in ASP.NET MVC Sample by Michael Kennedy: Forum";
+
+	string commentText = Model;
+}
+
+<h2>Unsafe Forum</h2>
+<div>
+	This is an unsafe forum. Try entering this comment below. You may have to press reload to see it hack:<br/>
+	<br/>
+	@("<script> alert('hacked you!');</script>") 
+</div>
+<br/>
+<br/>
+<div>
+	<strong>Comment text:</strong><br/>
+	<div>
+		@Html.Raw(commentText)
+	</div>
+</div>
+
+<div style="color: gray; margin-top: 40px; border-top: 1px solid black;">
+	Post / update a comment:<br/>
+	@using(Html.BeginForm())
+	{
+		<h3>Comment Text</h3>
+		@Html.TextArea("commentText", commentText)<br/>
+	    <button>Update contents</button>
+	}
+
+</div>
