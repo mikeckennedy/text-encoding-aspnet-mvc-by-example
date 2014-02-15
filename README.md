@@ -31,12 +31,12 @@ could be a nuisance to your real users.
 On the other hand, if you're building a CMS or utility 
 helper method, you do not want to filter out the HTML a 
 user might type. They probably need to enter some HTML
- which you�ll want to show to all the other users. Same 
+ which you'll want to show to all the other users. Same 
 thing goes for code your app might generate.
 
 There are at least three ways which MVC manages 
 and encodes (or does not encode) text data. Knowing 
-which scenario you�re targeting allows you to choose 
+which scenario you're targeting allows you to choose 
 the right option. We'll look at four examples in this post:
 
 Keep reading at [http://blog.michaelckennedy.net/2012/10/15/understanding-text-encoding-in-asp-net-mvc/](http://blog.michaelckennedy.net/2012/10/15/understanding-text-encoding-in-asp-net-mvc/)
