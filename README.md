@@ -39,4 +39,4 @@ and encodes (or does not encode) text data. Knowing
 which scenario you're targeting allows you to choose 
 the right option. We'll look at four examples in this post:
 
-Keep reading at [http://blog.michaelckennedy.net/2012/10/15/understanding-text-encoding-in-asp-net-mvc/](http://blog.michaelckennedy.net/2012/10/15/understanding-text-encoding-in-asp-net-mvc/)
+[Keep reading...](http://blog.michaelckennedy.net/2012/10/15/understanding-text-encoding-in-asp-net-mvc/)
