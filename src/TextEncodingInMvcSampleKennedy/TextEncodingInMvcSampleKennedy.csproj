@@ -138,7 +138,6 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Properties\PublishProfiles\file.pubxml" />
     <Content Include="Images\cat.jpg" />
     <None Include="Properties\PublishProfiles\text-encoding-aspnet-mvc-by-example.pubxml" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
